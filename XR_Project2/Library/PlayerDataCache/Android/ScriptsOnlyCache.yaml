@@ -1,9 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - MapInfo
-    - PuzzleDrag
-    - PuzzleManager
+    - ButtonData
+    - ButtonManager
+    - ScoreManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -12,15 +12,14 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene 1.unity:
+    Assets/Scenes/Music.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -35,33 +34,37 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11170}
+      Script: {instanceID: 11172}
     - Class: 114
-      Script: {instanceID: 11366}
+      Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11376}
     - Class: 114
-      Script: {instanceID: 11748}
+      Script: {instanceID: 11770}
     - Class: 114
-      Script: {instanceID: 12124}
+      Script: {instanceID: 12158}
     - Class: 114
-      Script: {instanceID: 12392}
+      Script: {instanceID: 12652}
     - Class: 114
-      Script: {instanceID: 12598}
+      Script: {instanceID: 12684}
     - Class: 114
-      Script: {instanceID: 12908}
+      Script: {instanceID: 13012}
     - Class: 114
-      Script: {instanceID: 12946}
+      Script: {instanceID: 15436}
     - Class: 114
-      Script: {instanceID: 12968}
-    - Class: 114
-      Script: {instanceID: 12998}
+      Script: {instanceID: 16146}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -396,6 +399,12 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
+      Hash: 91529b7b72286975d39475a1f599183d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonData
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -514,7 +523,19 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 050addc7dd5497cbfd35878cdcbde4e0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreManager
+  - hash:
+      serializedVersion: 2
+      Hash: 492b5481917b7bc5285416ba0b06abf0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonManager
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene 1.unity
-  playerPath: C:/Users/Kuan-Chun/Desktop/XR_tmp.apk
+  - Assets/Scenes/Music.unity
+  playerPath: C:/Users/SCPC/Desktop/XR_music.apk
