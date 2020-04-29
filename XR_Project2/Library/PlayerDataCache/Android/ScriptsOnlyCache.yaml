@@ -1,7 +1,9 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - MapInfo
     - PuzzleDrag
+    - PuzzleManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -15,10 +17,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
-    - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/SampleScene 1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -38,26 +40,28 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11152}
+      Script: {instanceID: 11170}
     - Class: 114
-      Script: {instanceID: 11308}
+      Script: {instanceID: 11366}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11418}
     - Class: 114
-      Script: {instanceID: 11730}
+      Script: {instanceID: 11748}
     - Class: 114
-      Script: {instanceID: 12106}
+      Script: {instanceID: 12124}
     - Class: 114
-      Script: {instanceID: 12374}
+      Script: {instanceID: 12392}
     - Class: 114
-      Script: {instanceID: 12582}
+      Script: {instanceID: 12598}
     - Class: 114
-      Script: {instanceID: 12892}
+      Script: {instanceID: 12908}
     - Class: 114
-      Script: {instanceID: 12930}
+      Script: {instanceID: 12946}
+    - Class: 114
+      Script: {instanceID: 12968}
+    - Class: 114
+      Script: {instanceID: 12998}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -356,7 +360,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: f3ca1e54960e268fe72300afcbe5ec2a
+      Hash: a92067f7226be4e7156a09c3b72cc17a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PuzzleDrag
@@ -482,6 +486,12 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
+      Hash: ded1007f798c7ef11df44bcc4b03df93
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PuzzleManager
+  - hash:
+      serializedVersion: 2
       Hash: 7072231382eb3c4871b3dd75ad0227e1
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -494,11 +504,17 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: c3a1c81665cca90c2ebbabd6eec83adb
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MapInfo
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/SCPC/Desktop/XR_Project2.apk
+  - Assets/Scenes/SampleScene 1.unity
+  playerPath: C:/Users/Kuan-Chun/Desktop/XR_tmp.apk
