@@ -57,8 +57,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ScreenAdjust.cs" />
     <Compile Include="Assets\Scripts\Stage2\ButtonData.cs" />
     <Compile Include="Assets\Scripts\Stage2\ButtonManager.cs" />
+    <Compile Include="Assets\Scripts\Stage2\ButtonPool.cs" />
     <Compile Include="Assets\Scripts\Stage2\ScoreManager.cs" />
     <Compile Include="Assets\Scripts\Stage3\MapInfo.cs" />
     <Compile Include="Assets\Scripts\Stage3\PuzzleDrag.cs" />

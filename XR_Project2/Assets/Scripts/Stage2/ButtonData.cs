@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ButtonData : MonoBehaviour
 {
     // -239, -80, 84, 232
-    // y = 1000
+    // y = 800
     public float speed;
     public float x_pos;
     public float y_pos;
@@ -14,29 +14,32 @@ public class ButtonData : MonoBehaviour
     public float spawnSecondFromStart;
 
     public RectTransform judgePoint;
-
+    
     private RectTransform rect;
 
     public ScoreManager scoreManager;
 
+    public ButtonPool poolManager;
+
     void Start()
     {
-        rect = this.GetComponent<RectTransform>();
-        SetOriginPos(x_pos, y_pos);
 
     }
-
-    // Update is called once per frame
-    void Update()
+    void OnEnable()
     {
-        
+        rect = this.GetComponent<RectTransform>();
     }
-
     void FixedUpdate()
     {
         Vector3 tmp = rect.localPosition;
         tmp.y -= speed * Time.deltaTime;
         rect.localPosition = tmp;
+        if (tmp.y < -800.0f)
+        {
+            Handheld.Vibrate();
+            poolManager.Recycle(this.gameObject);
+        }
+
     }
 
     public void click()
@@ -46,25 +49,26 @@ public class ButtonData : MonoBehaviour
         Vector3 tmp2 = rect.position;
         tmp2.z = 0;
         float dist = Vector3.Distance(tmp1,tmp2);
-        if (dist < 8.0f)
+        if (dist < 15.0f)
         {
             scoreManager.AddScore(50);
 
 
         }
-        else if (dist < 15.0f)
+        else if (dist < 30.0f)
         {
             scoreManager.AddScore(34);
 
 
         }
-        else
+        else if(dist > 50.0f)
         {
             scoreManager.AddScore(0);
-
+            Handheld.Vibrate();
         }
         this.gameObject.SetActive(false);
-
+        Debug.Log(dist);
+        poolManager.Recycle(this.gameObject);
     }
 
     public void SetOriginPos(float x, float y)
@@ -80,9 +84,18 @@ public class ButtonData : MonoBehaviour
         this.speed = s;
     }
 
-    public void SetJudgeAndScoreManager(RectTransform rt, ScoreManager sm)
+    public void SetJudgePoint(RectTransform rt)
     {
         this.judgePoint = rt;
+    }
+
+    public void SetScoreManager(ScoreManager sm)
+    {
         this.scoreManager = sm;
+    }
+
+    public void SetPoolManager(ButtonPool bp)
+    {
+        this.poolManager = bp;
     }
 }

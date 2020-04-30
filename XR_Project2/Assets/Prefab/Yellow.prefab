@@ -87,13 +87,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 004a979c299af654b822dbb036a674f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 100
-  x_pos: -239
-  y_pos: 800
+  speed: 0
+  x_pos: 0
+  y_pos: 0
   spawnSecondFromStart: 0
   judgePoint: {fileID: 1278255513066611580, guid: 85fb4dc53b3b9a548ba78d2f4fb46e96,
     type: 3}
-  sm: {fileID: 5306257895334875078, guid: e49bfd4658ece4d40ae8923a97ba0c4a, type: 3}
+  scoreManager: {fileID: 0}
+  poolManager: {fileID: 0}
 --- !u!114 &7357321919207816140
 MonoBehaviour:
   m_ObjectHideFlags: 0

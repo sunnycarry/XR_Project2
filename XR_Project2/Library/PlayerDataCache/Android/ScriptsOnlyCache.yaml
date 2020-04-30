@@ -1,9 +1,10 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - ButtonData
-    - ButtonManager
-    - ScoreManager
+    - MapInfo
+    - PuzzleDrag
+    - PuzzleManager
+    - ScreenAdjust
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -12,14 +13,15 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
-    - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/Music.unity:
+    Assets/Scenes/SampleScene 1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -34,37 +36,35 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 82
-      Script: {instanceID: 0}
-    - Class: 83
-      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11172}
+      Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11336}
+      Script: {instanceID: 11356}
     - Class: 114
-      Script: {instanceID: 11376}
+      Script: {instanceID: 11408}
     - Class: 114
-      Script: {instanceID: 11770}
+      Script: {instanceID: 11750}
     - Class: 114
-      Script: {instanceID: 12158}
+      Script: {instanceID: 12140}
     - Class: 114
-      Script: {instanceID: 12652}
+      Script: {instanceID: 12418}
     - Class: 114
-      Script: {instanceID: 12684}
+      Script: {instanceID: 12636}
     - Class: 114
-      Script: {instanceID: 13012}
+      Script: {instanceID: 12958}
     - Class: 114
-      Script: {instanceID: 15436}
+      Script: {instanceID: 12996}
     - Class: 114
-      Script: {instanceID: 16146}
+      Script: {instanceID: 13018}
+    - Class: 114
+      Script: {instanceID: 13050}
+    - Class: 114
+      Script: {instanceID: 27304}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -297,6 +297,12 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
+      Hash: 050addc7dd5497cbfd35878cdcbde4e0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScoreManager
+  - hash:
+      serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -319,6 +325,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 9d7dcbfa342d87a0298e49062240abd6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonManager
   - hash:
       serializedVersion: 2
       Hash: 783f593b9380cf72d0f7ebfd4a0d4bcd
@@ -399,7 +411,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 91529b7b72286975d39475a1f599183d
+      Hash: 82489a8c2b73c217006a530084ccc54c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonData
@@ -525,17 +537,17 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 050addc7dd5497cbfd35878cdcbde4e0
+      Hash: f9df8570c7664c05994c3879e0f95bc3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ScoreManager
+    className: ScreenAdjust
   - hash:
       serializedVersion: 2
-      Hash: 492b5481917b7bc5285416ba0b06abf0
+      Hash: bad9573eef8ef3e3f1a20532cbb0cc6b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ButtonManager
+    className: ButtonPool
   platform: 13
   scenePathNames:
-  - Assets/Scenes/Music.unity
-  playerPath: C:/Users/SCPC/Desktop/XR_music.apk
+  - Assets/Scenes/SampleScene 1.unity
+  playerPath: C:/Users/SCPC/Desktop/XR0430_puzzle.apk

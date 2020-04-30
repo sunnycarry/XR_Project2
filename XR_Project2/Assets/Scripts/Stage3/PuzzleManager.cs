@@ -16,6 +16,7 @@ public class PuzzleManager : MonoBehaviour
         mapDistribute = new int[maps.Length];
         InitDistributeArray();
         RandomInitMapPosition();
+
     }
 
     // Start is called before the first frame update

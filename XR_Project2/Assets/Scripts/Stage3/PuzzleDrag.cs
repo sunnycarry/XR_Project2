@@ -30,6 +30,7 @@ public class PuzzleDrag : MonoBehaviour
     {
         puzzleStatus = new PuzzleStatus();
         originPos = this.GetComponent<RectTransform>().position;
+
     }
 
     // Update is called once per frame
@@ -76,9 +77,10 @@ public class PuzzleDrag : MonoBehaviour
             curIndex++;
         }
 
-        if (!findNearestMap)
-            this.GetComponent<RectTransform>().position = originPos;
-        else
+       // if (!findNearestMap)
+            // this.GetComponent<RectTransform>().position = originPos;
+            //else
+        if (findNearestMap)
             this.GetComponent<RectTransform>().position = puzzleMap.transform.GetChild(minIndex).GetComponent<RectTransform>().position;
         
 
