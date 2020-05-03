@@ -21,6 +21,7 @@ public class ButtonData : MonoBehaviour
 
     public ButtonPool poolManager;
 
+    public Text distT;
     void Start()
     {
 
@@ -42,6 +43,11 @@ public class ButtonData : MonoBehaviour
 
     }
 
+    public void SetDistT(Text t)
+    {
+        this.distT = t;
+    }
+
     public void click()
     {
         Vector3 tmp1 = judgePoint.position;
@@ -49,25 +55,21 @@ public class ButtonData : MonoBehaviour
         Vector3 tmp2 = rect.position;
         tmp2.z = 0;
         float dist = Vector3.Distance(tmp1,tmp2);
-        if (dist < 15.0f)
+        Debug.Log(dist);
+        if (dist < 90.0f)
         {
             scoreManager.AddScore(50);
 
 
         }
-        else if (dist < 30.0f)
+        else if (dist < 130.0f)
         {
             scoreManager.AddScore(34);
-
-
         }
-        else if(dist > 50.0f)
-        {
-            scoreManager.AddScore(0);
-            Handheld.Vibrate();
-        }
+
+        distT.text = dist.ToString();
         this.gameObject.SetActive(false);
-        Debug.Log(dist);
+
         poolManager.Recycle(this.gameObject);
     }
 

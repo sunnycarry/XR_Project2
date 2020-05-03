@@ -1,9 +1,10 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - MapInfo
-    - PuzzleDrag
-    - PuzzleManager
+    - ButtonData
+    - ButtonManager
+    - ButtonPool
+    - ScoreManager
     - ScreenAdjust
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -11,17 +12,21 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEditor.UI.dll:
+    - UnityEditor.UI.ButtonEditor
+    - UnityEditor.UI.ImageEditor
+    - UnityEditor.UI.LayoutElementEditor
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
-    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.LayoutElement
+    - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/SampleScene 1.unity:
+    Assets/Scenes/Music.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -36,6 +41,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -43,28 +52,32 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11356}
+      Script: {instanceID: 11298}
     - Class: 114
-      Script: {instanceID: 11408}
+      Script: {instanceID: 11318}
     - Class: 114
-      Script: {instanceID: 11750}
+      Script: {instanceID: 11358}
     - Class: 114
-      Script: {instanceID: 12140}
+      Script: {instanceID: 11474}
     - Class: 114
-      Script: {instanceID: 12418}
+      Script: {instanceID: 11752}
     - Class: 114
-      Script: {instanceID: 12636}
+      Script: {instanceID: 12090}
     - Class: 114
-      Script: {instanceID: 12958}
+      Script: {instanceID: 12142}
     - Class: 114
-      Script: {instanceID: 12996}
+      Script: {instanceID: 12244}
     - Class: 114
-      Script: {instanceID: 13018}
+      Script: {instanceID: 12398}
     - Class: 114
-      Script: {instanceID: 13050}
+      Script: {instanceID: 12640}
     - Class: 114
-      Script: {instanceID: 27304}
+      Script: {instanceID: 12672}
+    - Class: 114
+      Script: {instanceID: 13000}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -121,6 +134,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 5da734bc5505f93626d2090eac6b7f9f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtonPool
   - hash:
       serializedVersion: 2
       Hash: 72712369a7c681ad84fc255a5ec0b333
@@ -327,7 +346,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 9d7dcbfa342d87a0298e49062240abd6
+      Hash: 5df94f2e045583aa2372fd1ba76a3878
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonManager
@@ -375,6 +394,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: f9df8570c7664c05994c3879e0f95bc3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ScreenAdjust
+  - hash:
+      serializedVersion: 2
       Hash: a92067f7226be4e7156a09c3b72cc17a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -411,7 +436,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: 82489a8c2b73c217006a530084ccc54c
+      Hash: 3587b1277f205348b1fc0bc14d247aeb
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonData
@@ -537,17 +562,11 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: f9df8570c7664c05994c3879e0f95bc3
+      Hash: 1f5235880506c2fda42693ae6207d8d6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: ScreenAdjust
-  - hash:
-      serializedVersion: 2
-      Hash: bad9573eef8ef3e3f1a20532cbb0cc6b
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ButtonPool
+    className: WriteFile
   platform: 13
   scenePathNames:
-  - Assets/Scenes/SampleScene 1.unity
-  playerPath: C:/Users/SCPC/Desktop/XR0430_puzzle.apk
+  - Assets/Scenes/Music.unity
+  playerPath: C:/Users/SCPC/Desktop/meme.apk

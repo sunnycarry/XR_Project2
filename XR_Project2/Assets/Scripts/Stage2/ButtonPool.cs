@@ -19,6 +19,7 @@ public class ButtonPool : MonoBehaviour
     [SerializeField]
     public GameObject canvas;
 
+    public Text dist;
     private float speed;
     private float[] spawnPosX = new float[] { -239, -80, 84, 232 };
     void Awake()
@@ -46,6 +47,7 @@ public class ButtonPool : MonoBehaviour
 
         bd.SetOriginPos(spawnPosX[line-1], 800);
         bd.SetJudgePoint(judgePoints[line-1]);
+        bd.SetDistT(dist);
         b.GetComponent<Image>().sprite = btnImg[(line-1) %2];
 
     }
@@ -66,7 +68,9 @@ public class ButtonPool : MonoBehaviour
             tmpBD.SetScoreManager(scoreManager);
             tmpBD.SetPoolManager(this);
             tmpBD.SetSpeed(speed);
+            b.GetComponent<LayoutElement>().layoutPriority = num - i;
             b.SetActive(false);
+
         }
     }
 }
