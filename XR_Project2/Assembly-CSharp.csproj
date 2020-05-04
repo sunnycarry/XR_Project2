@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Puzzle\MapManager.cs" />
     <Compile Include="Assets\Scripts\Puzzle\PuzzleDrag.cs" />
     <Compile Include="Assets\Scripts\Puzzle\PuzzleManager.cs" />
+    <Compile Include="Assets\Scripts\SceneController.cs" />
     <Compile Include="Assets\Scripts\ScreenAdjust.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Unity2019/XR_Project2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
