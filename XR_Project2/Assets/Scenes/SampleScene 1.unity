@@ -222,11 +222,11 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 12
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 384.00003, y: -193}
+  m_AnchoredPosition: {x: 222.00003, y: -79.40002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &155813470
@@ -278,6 +278,134 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapID: 12
+  isPlaced: 0
+--- !u!1 &165249343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 165249345}
+  - component: {fileID: 165249344}
+  m_Layer: 0
+  m_Name: AudioBGM
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &165249344
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165249343}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: f8cac2fb3de1eee449ecca375a2d2366, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &165249345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165249343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 360.89658, y: 205.58812, z: -2003.5625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &183089786
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,7 +489,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 19.499996}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &290770002
@@ -502,10 +630,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b44a9a7389bae4d9c3db874df067be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distThreshold: 75
-  id: 0
+  distThreshold: 130
+  id: 15
+  positionID: 0
   originPos: {x: 0, y: 0, z: 0}
   puzzleMap: {fileID: 1531231966}
+  mapManager: {fileID: 1508012229}
+  puzzleManager: {fileID: 984632390}
 --- !u!114 &290770007
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -680,10 +811,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b44a9a7389bae4d9c3db874df067be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distThreshold: 75
-  id: 0
+  distThreshold: 130
+  id: 13
+  positionID: 0
   originPos: {x: 0, y: 0, z: 0}
   puzzleMap: {fileID: 1531231966}
+  mapManager: {fileID: 1508012229}
+  puzzleManager: {fileID: 984632390}
 --- !u!114 &317882041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -858,10 +992,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b44a9a7389bae4d9c3db874df067be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distThreshold: 75
-  id: 0
+  distThreshold: 130
+  id: 4
+  positionID: 0
   originPos: {x: 0, y: 0, z: 0}
   puzzleMap: {fileID: 1531231966}
+  mapManager: {fileID: 1508012229}
+  puzzleManager: {fileID: 984632390}
 --- !u!114 &355142144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -929,11 +1066,11 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 139.2, y: -43.8}
+  m_AnchoredPosition: {x: -22.800003, y: 69.79999}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &374660588
@@ -985,6 +1122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapID: 2
+  isPlaced: 0
 --- !u!1 &388333613
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,11 +1204,11 @@ RectTransform:
   m_LocalScale: {x: 1.3333333, y: 1.3333333, z: 2}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 0
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 163.46666, y: -112.799995}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 475.8, y: 325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &400580855
@@ -1317,10 +1455,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b44a9a7389bae4d9c3db874df067be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distThreshold: 75
-  id: 0
+  distThreshold: 130
+  id: 2
+  positionID: 0
   originPos: {x: 0, y: 0, z: 0}
   puzzleMap: {fileID: 1531231966}
+  mapManager: {fileID: 1508012229}
+  puzzleManager: {fileID: 984632390}
 --- !u!114 &535136677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1388,11 +1529,11 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 388, y: -50}
+  m_AnchoredPosition: {x: 226, y: 63.599983}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &563735817
@@ -1444,6 +1585,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapID: 4
+  isPlaced: 0
 --- !u!1 &614682322
 GameObject:
   m_ObjectHideFlags: 0
@@ -1475,11 +1617,11 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 141.4, y: -196.7}
+  m_AnchoredPosition: {x: -20.600006, y: -83.10001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &614682324
@@ -1531,6 +1673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapID: 10
+  isPlaced: 0
 --- !u!1 &617689339
 GameObject:
   m_ObjectHideFlags: 0
@@ -1669,10 +1812,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b44a9a7389bae4d9c3db874df067be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distThreshold: 75
-  id: 0
+  distThreshold: 130
+  id: 9
+  positionID: 0
   originPos: {x: 0, y: 0, z: 0}
   puzzleMap: {fileID: 1531231966}
+  mapManager: {fileID: 1508012229}
+  puzzleManager: {fileID: 984632390}
 --- !u!114 &617689344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1801,6 +1947,133 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &708776555
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 708776557}
+  - component: {fileID: 708776556}
+  m_Layer: 0
+  m_Name: AudioFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &708776556
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708776555}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &708776557
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708776555}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 360.89658, y: 205.58812, z: -2003.5625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &729085493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1939,10 +2212,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b44a9a7389bae4d9c3db874df067be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distThreshold: 75
-  id: 0
+  distThreshold: 130
+  id: 8
+  positionID: 0
   originPos: {x: 0, y: 0, z: 0}
   puzzleMap: {fileID: 1531231966}
+  mapManager: {fileID: 1508012229}
+  puzzleManager: {fileID: 984632390}
 --- !u!114 &729085498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2089,11 +2365,11 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 275.00003, y: -109}
+  m_AnchoredPosition: {x: 113.00003, y: 4.5999756}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &788239632
@@ -2145,6 +2421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapID: 7
+  isPlaced: 0
 --- !u!1 &859283908
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,11 +2453,11 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 384.00003, y: -266}
+  m_AnchoredPosition: {x: 222.00003, y: -152.40002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &859283910
@@ -2232,6 +2509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapID: 16
+  isPlaced: 0
 --- !u!1 &864847904
 GameObject:
   m_ObjectHideFlags: 0
@@ -2319,7 +2597,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 2
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -2508,10 +2786,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b44a9a7389bae4d9c3db874df067be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distThreshold: 75
-  id: 0
+  distThreshold: 130
+  id: 16
+  positionID: 0
   originPos: {x: 0, y: 0, z: 0}
   puzzleMap: {fileID: 1531231966}
+  mapManager: {fileID: 1508012229}
+  puzzleManager: {fileID: 984632390}
 --- !u!114 &956451188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2769,10 +3050,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b44a9a7389bae4d9c3db874df067be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distThreshold: 75
-  id: 0
+  distThreshold: 130
+  id: 3
+  positionID: 0
   originPos: {x: 0, y: 0, z: 0}
   puzzleMap: {fileID: 1531231966}
+  mapManager: {fileID: 1508012229}
+  puzzleManager: {fileID: 984632390}
 --- !u!114 &969333303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2840,11 +3124,11 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 13
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 45.2, y: -281.9}
+  m_AnchoredPosition: {x: -116.8, y: -168.30002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &980955799
@@ -2896,6 +3180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapID: 13
+  isPlaced: 0
 --- !u!1 &984632388
 GameObject:
   m_ObjectHideFlags: 0
@@ -3287,10 +3572,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b44a9a7389bae4d9c3db874df067be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distThreshold: 75
-  id: 0
+  distThreshold: 130
+  id: 14
+  positionID: 0
   originPos: {x: 0, y: 0, z: 0}
   puzzleMap: {fileID: 1531231966}
+  mapManager: {fileID: 1508012229}
+  puzzleManager: {fileID: 984632390}
 --- !u!114 &1166166559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3431,11 +3719,11 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 150, y: -111.6}
+  m_AnchoredPosition: {x: -12, y: 2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1212219914
@@ -3487,6 +3775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapID: 6
+  isPlaced: 0
 --- !u!1 &1220285526
 GameObject:
   m_ObjectHideFlags: 0
@@ -3625,10 +3914,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b44a9a7389bae4d9c3db874df067be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distThreshold: 75
-  id: 0
+  distThreshold: 130
+  id: 6
+  positionID: 0
   originPos: {x: 0, y: 0, z: 0}
   puzzleMap: {fileID: 1531231966}
+  mapManager: {fileID: 1508012229}
+  puzzleManager: {fileID: 984632390}
 --- !u!114 &1220285531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3803,10 +4095,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b44a9a7389bae4d9c3db874df067be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distThreshold: 75
-  id: 0
+  distThreshold: 130
+  id: 11
+  positionID: 0
   originPos: {x: 0, y: 0, z: 0}
   puzzleMap: {fileID: 1531231966}
+  mapManager: {fileID: 1508012229}
+  puzzleManager: {fileID: 984632390}
 --- !u!114 &1317020905
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3874,11 +4169,11 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 379.00003, y: -128}
+  m_AnchoredPosition: {x: 217.00003, y: -14.400024}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1373325168
@@ -3930,6 +4225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapID: 8
+  isPlaced: 0
 --- !u!1 &1481900006
 GameObject:
   m_ObjectHideFlags: 0
@@ -4103,10 +4399,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b44a9a7389bae4d9c3db874df067be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distThreshold: 75
-  id: 0
+  distThreshold: 130
+  id: 7
+  positionID: 0
   originPos: {x: 0, y: 0, z: 0}
   puzzleMap: {fileID: 1531231966}
+  mapManager: {fileID: 1508012229}
+  puzzleManager: {fileID: 984632390}
 --- !u!114 &1489785122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4143,6 +4442,91 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1489785117}
   m_CullTransparentMesh: 0
+--- !u!1 &1508012228
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1508012230}
+  - component: {fileID: 1508012229}
+  m_Layer: 0
+  m_Name: MapManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1508012229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508012228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 178273e079e527a489fb098474558b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundFX_AC:
+  - {fileID: 8300000, guid: 63627946853d625419a418c1a0c70cda, type: 3}
+  - {fileID: 8300000, guid: 4ff147c35a5a9b04b9b3b472ea54aee0, type: 3}
+  - {fileID: 8300000, guid: 42d77e3ff2d028a4380fbe5b249320f1, type: 3}
+  - {fileID: 8300000, guid: 8299a0d9be9fd9e4da7db5390a60c7c7, type: 3}
+  soundBGM_AC: []
+  soundFX: {fileID: 708776556}
+  soundBGM: {fileID: 165249344}
+  puzzles:
+  - {fileID: 1941813861}
+  - {fileID: 535136676}
+  - {fileID: 969333302}
+  - {fileID: 355142143}
+  - {fileID: 1853140478}
+  - {fileID: 1220285530}
+  - {fileID: 1489785121}
+  - {fileID: 729085497}
+  - {fileID: 617689343}
+  - {fileID: 1924903190}
+  - {fileID: 1317020904}
+  - {fileID: 1919776561}
+  - {fileID: 317882040}
+  - {fileID: 1166166558}
+  - {fileID: 290770006}
+  - {fileID: 956451187}
+  maps:
+  - {fileID: 1773099470}
+  - {fileID: 374660590}
+  - {fileID: 1584854165}
+  - {fileID: 563735819}
+  - {fileID: 1952367282}
+  - {fileID: 1212219916}
+  - {fileID: 788239634}
+  - {fileID: 1373325170}
+  - {fileID: 1691924807}
+  - {fileID: 614682326}
+  - {fileID: 1742583601}
+  - {fileID: 155813472}
+  - {fileID: 980955801}
+  - {fileID: 2039024857}
+  - {fileID: 1720126976}
+  - {fileID: 859283912}
+--- !u!4 &1508012230
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1508012228}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 360.89658, y: 205.58812, z: -2003.5625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1531231966
 GameObject:
   m_ObjectHideFlags: 0
@@ -4171,7 +4555,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.5}
   m_Children:
-  - {fileID: 400580854}
   - {fileID: 1773099467}
   - {fileID: 374660587}
   - {fileID: 1584854162}
@@ -4188,12 +4571,13 @@ RectTransform:
   - {fileID: 2039024854}
   - {fileID: 1720126973}
   - {fileID: 859283909}
+  - {fileID: 400580854}
   m_Father: {fileID: 911133850}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124.3, y: 88}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1531231968
@@ -4251,11 +4635,11 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 271.00003, y: -45}
+  m_AnchoredPosition: {x: 109.00003, y: 68.59999}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1584854163
@@ -4307,6 +4691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapID: 3
+  isPlaced: 0
 --- !u!1 &1691924803
 GameObject:
   m_ObjectHideFlags: 0
@@ -4338,11 +4723,11 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 33.1, y: -194.4}
+  m_AnchoredPosition: {x: -128.90001, y: -80.80001}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1691924805
@@ -4394,6 +4779,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapID: 9
+  isPlaced: 0
 --- !u!1 &1720126972
 GameObject:
   m_ObjectHideFlags: 0
@@ -4425,11 +4811,11 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 15
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 278.00003, y: -267}
+  m_AnchoredPosition: {x: 116.00003, y: -153.40002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1720126974
@@ -4481,6 +4867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapID: 15
+  isPlaced: 0
 --- !u!1 &1742583597
 GameObject:
   m_ObjectHideFlags: 0
@@ -4512,11 +4899,11 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 267.00003, y: -181}
+  m_AnchoredPosition: {x: 105.00003, y: -67.40002}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1742583599
@@ -4568,6 +4955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapID: 11
+  isPlaced: 0
 --- !u!1 &1773099466
 GameObject:
   m_ObjectHideFlags: 0
@@ -4599,11 +4987,11 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 31.19999, y: -42.99999}
+  m_AnchoredPosition: {x: -130.8, y: 70.600006}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1773099468
@@ -4655,6 +5043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapID: 1
+  isPlaced: 0
 --- !u!1 &1810155858
 GameObject:
   m_ObjectHideFlags: 0
@@ -4828,10 +5217,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b44a9a7389bae4d9c3db874df067be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distThreshold: 75
-  id: 0
+  distThreshold: 130
+  id: 5
+  positionID: 0
   originPos: {x: 0, y: 0, z: 0}
   puzzleMap: {fileID: 1531231966}
+  mapManager: {fileID: 1508012229}
+  puzzleManager: {fileID: 984632390}
 --- !u!114 &1853140479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5041,10 +5433,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b44a9a7389bae4d9c3db874df067be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distThreshold: 75
-  id: 0
+  distThreshold: 130
+  id: 12
+  positionID: 0
   originPos: {x: 0, y: 0, z: 0}
   puzzleMap: {fileID: 1531231966}
+  mapManager: {fileID: 1508012229}
+  puzzleManager: {fileID: 984632390}
 --- !u!114 &1919776562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5219,10 +5614,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b44a9a7389bae4d9c3db874df067be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distThreshold: 75
-  id: 0
+  distThreshold: 130
+  id: 10
+  positionID: 0
   originPos: {x: 0, y: 0, z: 0}
   puzzleMap: {fileID: 1531231966}
+  mapManager: {fileID: 1508012229}
+  puzzleManager: {fileID: 984632390}
 --- !u!114 &1924903191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5425,10 +5823,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7b44a9a7389bae4d9c3db874df067be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distThreshold: 75
-  id: 0
+  distThreshold: 130
+  id: 1
+  positionID: 0
   originPos: {x: 0, y: 0, z: 0}
   puzzleMap: {fileID: 1531231966}
+  mapManager: {fileID: 1508012229}
+  puzzleManager: {fileID: 984632390}
 --- !u!114 &1941813862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5503,11 +5904,11 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 29.1, y: -107.8}
+  m_AnchoredPosition: {x: -132.9, y: 5.7999725}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1952367280
@@ -5559,6 +5960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapID: 5
+  isPlaced: 0
 --- !u!1 &1987833065
 GameObject:
   m_ObjectHideFlags: 0
@@ -5625,11 +6027,11 @@ RectTransform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children: []
   m_Father: {fileID: 1531231967}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 140.5, y: -274.6}
+  m_AnchoredPosition: {x: -21.5, y: -161.00003}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2039024855
@@ -5681,6 +6083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapID: 14
+  isPlaced: 0
 --- !u!1 &2129746728
 GameObject:
   m_ObjectHideFlags: 0

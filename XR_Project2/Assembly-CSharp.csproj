@@ -57,14 +57,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Music\ButtonData.cs" />
+    <Compile Include="Assets\Scripts\Music\ButtonManager.cs" />
+    <Compile Include="Assets\Scripts\Music\ButtonPool.cs" />
+    <Compile Include="Assets\Scripts\Music\MusicChooser.cs" />
+    <Compile Include="Assets\Scripts\Music\ScoreManager.cs" />
+    <Compile Include="Assets\Scripts\Puzzle\MapInfo.cs" />
+    <Compile Include="Assets\Scripts\Puzzle\MapManager.cs" />
+    <Compile Include="Assets\Scripts\Puzzle\PuzzleDrag.cs" />
+    <Compile Include="Assets\Scripts\Puzzle\PuzzleManager.cs" />
     <Compile Include="Assets\Scripts\ScreenAdjust.cs" />
-    <Compile Include="Assets\Scripts\Stage2\ButtonData.cs" />
-    <Compile Include="Assets\Scripts\Stage2\ButtonManager.cs" />
-    <Compile Include="Assets\Scripts\Stage2\ButtonPool.cs" />
-    <Compile Include="Assets\Scripts\Stage2\ScoreManager.cs" />
-    <Compile Include="Assets\Scripts\Stage3\MapInfo.cs" />
-    <Compile Include="Assets\Scripts\Stage3\PuzzleDrag.cs" />
-    <Compile Include="Assets\Scripts\Stage3\PuzzleManager.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>D:/Unity2019/XR_Project2/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

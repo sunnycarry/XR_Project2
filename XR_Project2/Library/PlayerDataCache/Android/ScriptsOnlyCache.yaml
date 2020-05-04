@@ -1,10 +1,10 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - ButtonData
-    - ButtonManager
-    - ButtonPool
-    - ScoreManager
+    - MapInfo
+    - MapManager
+    - PuzzleDrag
+    - PuzzleManager
     - ScreenAdjust
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -12,21 +12,17 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
-    UnityEditor.UI.dll:
-    - UnityEditor.UI.ButtonEditor
-    - UnityEditor.UI.ImageEditor
-    - UnityEditor.UI.LayoutElementEditor
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.EventTrigger
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
-    - UnityEngine.UI.LayoutElement
-    - UnityEngine.UI.Text
   sceneClasses:
-    Assets/Scenes/Music.unity:
+    Assets/Scenes/SampleScene 1.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -52,32 +48,30 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11152}
     - Class: 114
-      Script: {instanceID: 11298}
-    - Class: 114
-      Script: {instanceID: 11318}
-    - Class: 114
       Script: {instanceID: 11358}
     - Class: 114
-      Script: {instanceID: 11474}
+      Script: {instanceID: 11410}
     - Class: 114
       Script: {instanceID: 11752}
     - Class: 114
-      Script: {instanceID: 12090}
-    - Class: 114
       Script: {instanceID: 12142}
-    - Class: 114
-      Script: {instanceID: 12244}
     - Class: 114
       Script: {instanceID: 12398}
     - Class: 114
-      Script: {instanceID: 12640}
+      Script: {instanceID: 12422}
     - Class: 114
-      Script: {instanceID: 12672}
+      Script: {instanceID: 12642}
     - Class: 114
-      Script: {instanceID: 13000}
+      Script: {instanceID: 12964}
+    - Class: 114
+      Script: {instanceID: 13002}
+    - Class: 114
+      Script: {instanceID: 13024}
+    - Class: 114
+      Script: {instanceID: 13056}
+    - Class: 114
+      Script: {instanceID: 14918}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -136,7 +130,7 @@ ScriptsOnlyBuild:
     className: ActivationTrack
   - hash:
       serializedVersion: 2
-      Hash: 5da734bc5505f93626d2090eac6b7f9f
+      Hash: 2ae39b611560f2047c2593d0de29407f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonPool
@@ -346,7 +340,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 5df94f2e045583aa2372fd1ba76a3878
+      Hash: b5139e6be164eb07f6a909502092c6e4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ButtonManager
@@ -400,7 +394,7 @@ ScriptsOnlyBuild:
     className: ScreenAdjust
   - hash:
       serializedVersion: 2
-      Hash: a92067f7226be4e7156a09c3b72cc17a
+      Hash: fd741ba25b5a5406e336058a246b48be
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PuzzleDrag
@@ -410,6 +404,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: ba827b9b3aa37586f4179f2dd47e3ff9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MusicChooser
   - hash:
       serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
@@ -550,7 +550,7 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
-      Hash: c3a1c81665cca90c2ebbabd6eec83adb
+      Hash: eb4a334eb2d5be6814b13618cc239459
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MapInfo
@@ -562,11 +562,11 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 1f5235880506c2fda42693ae6207d8d6
+      Hash: 252543adaa0269af9f5122f252209366
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: WriteFile
+    className: MapManager
   platform: 13
   scenePathNames:
-  - Assets/Scenes/Music.unity
-  playerPath: C:/Users/SCPC/Desktop/meme.apk
+  - Assets/Scenes/SampleScene 1.unity
+  playerPath: C:/Users/SCPC/Desktop/XR_puzzle.apk

@@ -161,7 +161,7 @@ MonoBehaviour:
   btnImg:
   - {fileID: 21300000, guid: 234a03d5e03d9454f871eba9ee2290fd, type: 3}
   - {fileID: 21300000, guid: b44902efe8f201f4aaabcdc8914b7c7d, type: 3}
-  canvas: {fileID: 924009178}
+  note: {fileID: 1243644851}
   dist: {fileID: 483559561}
 --- !u!4 &29779619
 Transform:
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 483559562}
   - component: {fileID: 483559561}
   m_Layer: 5
-  m_Name: Text
+  m_Name: DistText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -506,7 +506,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 009845030bcf2eb4a9ed7ad7651fb96a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b8f6b09356c9d29428ac2297015c1d17, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -758,6 +758,7 @@ RectTransform:
   - {fileID: 3033529950248983673}
   - {fileID: 4295723423982916067}
   - {fileID: 483559563}
+  - {fileID: 1243644852}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -775,6 +776,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1150300694}
+  - component: {fileID: 1150300695}
   m_Layer: 0
   m_Name: MusicChooser
   m_TagString: Untagged
@@ -796,6 +798,67 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1150300695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150300693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aed4beda26a076e468587c0d40c906f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllMusics:
+  - {fileID: 8300000, guid: b54c34f216d12d14cb91707f558d32d9, type: 3}
+  - {fileID: 8300000, guid: b8f6b09356c9d29428ac2297015c1d17, type: 3}
+  - {fileID: 8300000, guid: 611adcbd22425d34ca712180863b0e58, type: 3}
+  - {fileID: 8300000, guid: 9042c55346464ed4d85e9218f0b25251, type: 3}
+  musicSpeed:
+  - 700
+  - 450
+  - 520
+  - 750
+  musicPlayer: {fileID: 513692028}
+  buttonManager: {fileID: 1617335015}
+  buttonPool: {fileID: 29779618}
+  randomChoose: 1
+--- !u!1 &1243644851
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1243644852}
+  m_Layer: 5
+  m_Name: Note
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1243644852
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243644851}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 924009182}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1247029553
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,9 +1294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46a18179b647fe74da9e5b149b649d1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BPM: 103
-  speed: 800
-  canvas: {fileID: 924009178}
+  speed: 400
   judgePoints:
   - {fileID: 2047467435}
   - {fileID: 190304033}
@@ -1248,7 +1309,7 @@ MonoBehaviour:
   - {fileID: 6862571916022640981, guid: 57cb9f7f2dbb5554c8945088b9461a8c, type: 3}
   - {fileID: 9086524814926868130, guid: 1f3af9c9089d2954b8622b5e370ceaab, type: 3}
   poolManager: {fileID: 29779618}
-  fileName: titan_
+  fileName: mei_
 --- !u!1 &1804441322
 GameObject:
   m_ObjectHideFlags: 0
