@@ -22,6 +22,9 @@ public class ButtonPool : MonoBehaviour
     public Text dist;
     private float speed;
     private float[] spawnPosX = new float[] { -239, -80, 84, 232 };
+
+    public bool isCreate = false;
+
     void Awake()
     {
        // speed = buttonManager.GetSpeed();
@@ -29,14 +32,8 @@ public class ButtonPool : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        btnPool = new Queue<GameObject>();
-        CreatePool(30);
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+       // CreatePool(30);
     }
 
     public void Reuse(int line)
@@ -63,19 +60,49 @@ public class ButtonPool : MonoBehaviour
         this.speed = s;
     }
 
-    private void CreatePool(int num)
+    public void CreatePool(int num)
     {
+        // use one stack to reverse the order of accessing Button
+        // because the priority in Canvas is from top(first access) to bottom(last success)
+        // we should Reuse the button from bottom to top, 
+        // when button overlapped, player can click the button below(more close to the end line, create earlier, accessing order is first)
+        btnPool = new Queue<GameObject>();
+        Stack<GameObject> tmpBtnQueue = new Stack<GameObject>();
         for (int i = 0; i < num; ++i)
         {
             GameObject b = Instantiate(btn, note.transform) as GameObject;
-            btnPool.Enqueue(b);
+            tmpBtnQueue.Push(b);
+            //btnPool.Enqueue(b);
             ButtonData tmpBD = b.GetComponent<ButtonData>();
             tmpBD.SetScoreManager(scoreManager);
             tmpBD.SetPoolManager(this);
             tmpBD.SetSpeed(speed);
-            b.GetComponent<LayoutElement>().layoutPriority = i;
             b.SetActive(false);
+        }
+        for (int i = 0; i < num; ++i)
+        {
+            btnPool.Enqueue(tmpBtnQueue.Pop());
+        }
+        isCreate = true;
+    }
 
+    public void SetButtonSpeed()
+    {
+        for (int i = 0; i < 30; ++i)
+        {
+            GameObject g = btnPool.Dequeue();
+            g.GetComponent<ButtonData>().SetSpeed(speed);
+            btnPool.Enqueue(g);
+        }
+    }
+
+    public void SetButtonSpeed(float s)
+    {
+        for (int i = 0; i < 30; ++i)
+        {
+            GameObject g = btnPool.Dequeue();
+            g.GetComponent<ButtonData>().SetSpeed(s);
+            btnPool.Enqueue(g);
         }
     }
 }

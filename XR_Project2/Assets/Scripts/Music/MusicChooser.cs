@@ -11,6 +11,21 @@ public class MusicChooser : MonoBehaviour
     public ButtonPool buttonPool;
     public bool randomChoose;
 
+    private bool _chooseFinish;
+    private int last_index;
+
+    public bool checkFinish
+    {
+        get
+        {
+            return _chooseFinish;
+        }
+        set
+        {
+            _chooseFinish = value;
+        }
+    }
+
     public List<float[]> musicSteps = new List<float[]>()
     {
         new float[] { 5.098662f, 5.375987f, 5.717324f, 6.015986f, 6.293311f, 6.570658f, 6.86932f, 7.167982f, 7.466644f, 7.765329f, 8.042653f, 8.341315f, 8.639977f, 8.917324f, 9.215986f, 9.514648f, 9.791995f, 10.04798f, 10.36798f, 10.66664f, 10.96533f, 11.26399f, 11.56265f, 11.81866f, 12.13866f, 12.41599f, 12.71465f, 13.01331f, 13.29066f, 13.56798f, 13.90932f, 14.18664f, 14.82664f, 15.10399f, 15.40265f, 15.67998f, 15.93599f, 16.23465f, 16.49066f, 17.13066f, 18.30399f, 18.58132f, 18.90132f, 19.43465f, 20.032f, 20.60798f, 20.88533f, 21.18399f, 21.71733f, 22.01599f, 22.35732f, 22.93331f, 24.40533f, 24.68265f, 24.98132f, 25.23732f, 25.57866f, 26.04798f, 26.55998f, 27.64798f, 27.92533f, 28.24533f, 28.52265f, 28.94932f, 29.37599f, 30.01599f, 30.29331f, 30.592f, 31.14664f, 31.38132f, 31.67998f, 32.34132f, 32.74664f, 33.06664f, 33.38664f, 33.68533f, 33.94131f, 34.28265f, 34.55998f, 35.13599f, 35.39199f, 35.71199f, 36.05331f, 36.33066f, 36.62932f, 36.92798f, 37.54664f, 37.80265f, 38.07998f, 38.37866f, 38.65599f, 38.97599f, 39.27465f, 39.85066f, 40.36265f, 40.66132f, 41.00265f, 41.62132f, 42.19732f, 42.45331f, 42.73066f, 43.02932f, 43.30664f, 43.62664f, 43.92533f, 44.50132f, 44.79998f, 45.05598f, 45.35465f, 45.67465f, 45.952f, 46.22932f, 46.50665f, 46.80533f, 47.31733f, 47.65866f, 47.93599f, 48.25599f, 48.55465f, 48.832f, 49.152f, 49.74932f, 50.02665f, 50.34665f, 50.92265f, 51.56265f, 52.11732f, 52.37331f, 52.60798f, 52.92798f, 53.24798f, 53.86665f, 54.42131f, 54.69866f, 54.97599f, 55.27465f, 55.61599f, 56.19199f, 56.44798f, 56.70399f, 57.04533f, 57.30132f, 57.62132f, 57.91998f, 58.38932f, 58.98664f, 59.34932f, 59.69066f, 60.26664f, 60.84265f, 61.11998f, 61.43998f, 61.73866f, 62.01599f, 62.33599f, 62.63465f, 63.14664f, 63.70132f, 63.99998f, 64.29866f, 64.59732f, 64.89599f, 65.49331f, 65.77066f, 66.04798f, 66.36798f, 66.66664f, 66.92265f, 67.22131f, 67.54131f, 67.81866f, 68.43732f, 69.86665f, 70.14399f, 70.61331f, 70.97598f, 71.27465f, 71.59465f, 71.89331f, 72.51199f, 73.02399f, 73.30132f, 73.59998f, 73.89866f, 74.19733f, 74.85867f, 75.13599f, 75.41331f, 75.66932f, 75.92533f, 76.24533f, 76.52265f, 77.14131f, 77.65331f, 77.97331f, 78.29331f, 78.93331f, 79.42399f, 79.70132f, 80.02132f, 80.31998f, 80.59732f, 80.89599f, 81.17331f, 81.81331f, 82.34664f, 82.62399f, 82.90131f, 83.19997f, 83.51997f, 84.15998f, 84.41599f, 84.73598f, 85.01331f, 85.26932f, 85.61066f, 85.86665f, 86.16533f, 86.48533f, 87.63732f, 88.25599f, 88.76798f, 89.40798f, 91.34932f, 92.50131f, 93.69598f, 94.82664f, 95.97866f, 97.30132f },
@@ -21,15 +36,11 @@ public class MusicChooser : MonoBehaviour
 
     void Awake()
     {
-        if (randomChoose)
-        {
-            int index = Random.Range(0, AllMusics.Length);
-            Debug.Log(index);
-            musicPlayer.clip = AllMusics[index];
-            buttonPool.SetSpeed(musicSpeed[index]);
-            buttonManager.SetSpeed(musicSpeed[index]);
-            buttonManager.SetMainStep(musicSteps[index]);
-        }
+        last_index = -1;
+        //if (randomChoose)
+        //{
+        //    RandomChooseMusic();
+        //}
     }
 
     // Start is called before the first frame update
@@ -42,6 +53,21 @@ public class MusicChooser : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void RandomChooseMusic()
+    {
+        int index;
+        do
+        {
+            index = Random.Range(0, AllMusics.Length);
+        } while (index == last_index);
+        last_index = index;
+        musicPlayer.clip = AllMusics[index];
+        buttonPool.SetSpeed(musicSpeed[index]);
+        buttonManager.SetSpeed(musicSpeed[index]);
+        buttonManager.SetMainStep(musicSteps[index]);
+        _chooseFinish = true;
     }
 
 }

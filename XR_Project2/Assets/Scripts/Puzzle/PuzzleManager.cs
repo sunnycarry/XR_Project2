@@ -51,7 +51,6 @@ public class PuzzleManager : MonoBehaviour
 
     public void SetMapPos(int i)
     {
-        Debug.Log(i);
         Vector3 tmpPos = mapSpawnPosition[mapDistribute[i-1]].GetComponent<RectTransform>().position;
         maps[i-1].GetComponent<RectTransform>().position = tmpPos;
     }

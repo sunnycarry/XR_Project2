@@ -26,6 +26,12 @@ public class ScoreManager : MonoBehaviour
         score += value;
     }
 
+    public void ResetScore()
+    {
+        score = 0;
+        RefreshScore();
+    }
+
     public void RefreshScore()
     {
         Debug.Log("TODO  "+score);

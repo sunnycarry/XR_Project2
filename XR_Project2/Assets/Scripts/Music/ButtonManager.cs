@@ -27,7 +27,8 @@ public class ButtonManager : MonoBehaviour
     private List<float> beatMap_4 = new List<float>();
 
 
-
+    public float time;
+    public string songName;
 
     private bool[] isFinish;
     private float tmpTime;
@@ -38,6 +39,8 @@ public class ButtonManager : MonoBehaviour
     public string fileName = "forest_";
     StreamWriter writer;
 
+    public bool isStart = false;
+    public StageFSM stageFSM;
     void Awake()
     {
 
@@ -46,12 +49,7 @@ public class ButtonManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        start_delay = 1400.0f / speed;
-        AddDelayToMainStep();
-        RandomDistributeStartLine();
-        tmpTime = 0;
-        tmpIndex = new int[] { 0, 0, 0, 0 };
-        isFinish = new bool[] { false, false, false, false };
+        //ResetArrayData();
 
         /*int index = 1;
         while (File.Exists(fileName + index+".txt"))
@@ -59,24 +57,54 @@ public class ButtonManager : MonoBehaviour
 
         writer = new StreamWriter(fileName + index+".txt", true);
         */
-        audioSource.Play();
+        //audioSource.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
-    /*
-        if (Input.GetKeyDown(KeyCode.Space))
+        time = audioSource.time;
+        songName = audioSource.clip.name;
+        /*
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                writer.Write(audioSource.time + "f ,");
+            }
+            else if (Input.GetKeyDown(KeyCode.A))
+                writer.Close();
+        */
+        if (isStart)
         {
-            writer.Write(audioSource.time + "f ,");
+            CheckLine1();
+            CheckLine2();
+            CheckLine3();
+            CheckLine4();
+            if (audioSource.isPlaying == false)
+            {
+                stageFSM.StageEnd();
+                isStart = false;
+            }
+
         }
-        else if (Input.GetKeyDown(KeyCode.A))
-            writer.Close();
-    */
-        CheckLine1();
-        CheckLine2();
-        CheckLine3();
-        CheckLine4();
+
+
+    }
+
+
+
+    public void ResetArrayData()
+    {
+        ComputeStartDelay();
+        AddDelayToMainStep();
+        RandomDistributeStartLine();
+        tmpTime = 0;
+        tmpIndex = new int[] { 0, 0, 0, 0 };
+        isFinish = new bool[] { false, false, false, false };
+    }
+
+    private void ComputeStartDelay()
+    {
+        start_delay = 1400.0f / speed;
     }
 
     private void AddDelayToMainStep()
@@ -87,6 +115,10 @@ public class ButtonManager : MonoBehaviour
 
     private void RandomDistributeStartLine()
     {
+        beatMap_1.Clear();
+        beatMap_2.Clear();
+        beatMap_3.Clear();
+        beatMap_4.Clear();
         for (int i = 0; i < mainStep.Count; ++i)
         {
             int line = Random.Range(0, 4);
@@ -173,6 +205,7 @@ public class ButtonManager : MonoBehaviour
 
     public void SetMainStep(float[] step)
     {
+        mainStep.Clear();
         for (int i = 0; i < step.Length; ++i)
         {
             mainStep.Add(step[i]);
