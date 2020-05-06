@@ -518,7 +518,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 924009182}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -704,7 +704,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 924009182}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -941,7 +941,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 924009182}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -962,6 +962,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreBoard: {fileID: 2043947427}
   score: 10
+  blackOffset: 0.5
+  blackLimit: 6
+  topblack: {fileID: 281076753}
 --- !u!1 &924009178
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,6 +1060,7 @@ RectTransform:
   - {fileID: 1279969478}
   - {fileID: 274275560}
   - {fileID: 2129300877}
+  - {fileID: 1243644852}
   - {fileID: 281076753}
   - {fileID: 2043947426}
   - {fileID: 891737406}
@@ -1064,7 +1068,6 @@ RectTransform:
   - {fileID: 3033529950248983673}
   - {fileID: 4295723423982916067}
   - {fileID: 483559563}
-  - {fileID: 1243644852}
   - {fileID: 1048023366}
   - {fileID: 553613653}
   - {fileID: 1279600729}
@@ -1638,7 +1641,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 924009182}
-  m_RootOrder: 12
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2406,7 +2409,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 924009182}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2631,7 +2634,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 924009182}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2783,6 +2786,7 @@ MonoBehaviour:
   musicChooser: {fileID: 1150300695}
   buttonPool: {fileID: 29779618}
   buttonManager: {fileID: 1617335015}
+  scoreManager: {fileID: 891737407}
   StartPanel: {fileID: 553613652}
   EndPanel: {fileID: 1279600726}
   passAudioClip: {fileID: 8300000, guid: 32af1ab32ea02024da45b17d2a047ccf, type: 3}
@@ -3075,7 +3079,7 @@ PrefabInstance:
     - target: {fileID: 9086524814926868131, guid: 1f3af9c9089d2954b8622b5e370ceaab,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 9086524814926868131, guid: 1f3af9c9089d2954b8622b5e370ceaab,
         type: 3}
@@ -3333,7 +3337,7 @@ PrefabInstance:
     - target: {fileID: 6862571916022640986, guid: 57cb9f7f2dbb5554c8945088b9461a8c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6862571916022640986, guid: 57cb9f7f2dbb5554c8945088b9461a8c,
         type: 3}

@@ -3247,7 +3247,7 @@ MonoBehaviour:
   - {fileID: 780020379}
   - {fileID: 1064262124}
   - {fileID: 864847904}
-  maps:
+  puzzles:
   - {fileID: 1941813856}
   - {fileID: 535136672}
   - {fileID: 969333298}
@@ -3264,6 +3264,23 @@ MonoBehaviour:
   - {fileID: 1166166554}
   - {fileID: 290770002}
   - {fileID: 956451183}
+  mapInfos:
+  - {fileID: 1773099466}
+  - {fileID: 374660586}
+  - {fileID: 1584854161}
+  - {fileID: 563735815}
+  - {fileID: 1952367278}
+  - {fileID: 1212219912}
+  - {fileID: 788239630}
+  - {fileID: 1373325166}
+  - {fileID: 1691924803}
+  - {fileID: 614682322}
+  - {fileID: 1742583597}
+  - {fileID: 155813468}
+  - {fileID: 980955797}
+  - {fileID: 2039024853}
+  - {fileID: 1720126972}
+  - {fileID: 859283908}
 --- !u!1 &1064262124
 GameObject:
   m_ObjectHideFlags: 0

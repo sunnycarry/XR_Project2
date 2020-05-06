@@ -15,12 +15,11 @@ public class PuzzleDrag : MonoBehaviour
 
     public float distThreshold = 150;
     // id symbolized correct position(order)
-    [SerializeField]
-    private int id;
+
+    public int id;
 
     // save the area id
-    [SerializeField]
-    private int positionID;
+    public int positionID;
 
 
     [SerializeField]
@@ -58,7 +57,7 @@ public class PuzzleDrag : MonoBehaviour
         mapManager.PlayMusic("pickup");
         if (positionID != -1)
         {
-            puzzleMap.transform.GetChild(positionID-1).GetComponent<MapInfo>().setPlaceState(false);
+            puzzleMap.transform.GetChild(positionID - 1).GetComponent<MapInfo>().setPlaceState(false);
         }
     }
 
@@ -113,7 +112,7 @@ public class PuzzleDrag : MonoBehaviour
             }
 
         }
-            
+
     }
 
     public bool compareAns()
@@ -128,4 +127,19 @@ public class PuzzleDrag : MonoBehaviour
         originPos = pos;
     }
 
+    public int GetID()
+    {
+        return this.id;
+    }
+
+
+    public int GetPositionID()
+    {
+        return this.positionID;
+    }
+
+    public void SetPositionID(int num)
+    {
+        this.positionID = num;
+    }
 }

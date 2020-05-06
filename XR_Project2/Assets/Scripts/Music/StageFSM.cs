@@ -8,6 +8,7 @@ public class StageFSM : MonoBehaviour
     public MusicChooser musicChooser;
     public ButtonPool buttonPool;
     public ButtonManager buttonManager;
+    public ScoreManager scoreManager;
 
     public GameObject StartPanel;
     public GameObject EndPanel;
@@ -44,6 +45,7 @@ public class StageFSM : MonoBehaviour
         buttonManager.ResetArrayData();
         buttonManager.audioSource.Play();
         buttonManager.isStart = true;
+        scoreManager.ResetScore();
     }
 
     public void StageEnd()
