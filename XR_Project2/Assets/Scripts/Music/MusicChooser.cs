@@ -36,6 +36,10 @@ public class MusicChooser : MonoBehaviour
 
     void Awake()
     {
+        for (int i = 0; i < musicSteps[0].Length; ++i)
+        {
+            musicSteps[0][i] += 0.15f; 
+        }
         last_index = -1;
         //if (randomChoose)
         //{
@@ -60,7 +64,12 @@ public class MusicChooser : MonoBehaviour
         int index;
         do
         {
+            for (int i = 0; i < 10; ++i)
+            {
+                index = Random.Range(0, AllMusics.Length);
+            }
             index = Random.Range(0, AllMusics.Length);
+
         } while (index == last_index);
         last_index = index;
         musicPlayer.clip = AllMusics[index];

@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - MapInfo
     - MapManager
     - MusicChooser
+    - Photonfunction
     - PuzzleDrag
     - PuzzleManager
     - SceneController
@@ -23,6 +24,8 @@ ScriptsOnlyBuild:
     - Photon.Pun.Demo.PunBasics.PlayerUI
     - Photon.Pun.Demo.SlotRacer.PlayerControl
     - Photon.Pun.Demo.SlotRacer.Utils.SplineWalker
+    PhotonUnityNetworking.Editor.dll:
+    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonAnimatorView
     - Photon.Pun.PhotonRigidbodyView
@@ -72,35 +75,39 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11166}
+      Script: {instanceID: 11224}
     - Class: 114
-      Script: {instanceID: 11354}
+      Script: {instanceID: 11410}
     - Class: 114
-      Script: {instanceID: 11378}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11422}
+      Script: {instanceID: 11478}
     - Class: 114
-      Script: {instanceID: 11898}
+      Script: {instanceID: 11952}
     - Class: 114
-      Script: {instanceID: 12100}
+      Script: {instanceID: 12154}
     - Class: 114
-      Script: {instanceID: 12322}
+      Script: {instanceID: 12376}
     - Class: 114
-      Script: {instanceID: 12382}
+      Script: {instanceID: 12436}
     - Class: 114
-      Script: {instanceID: 12512}
+      Script: {instanceID: 12566}
     - Class: 114
-      Script: {instanceID: 12686}
+      Script: {instanceID: 12740}
     - Class: 114
-      Script: {instanceID: 12756}
+      Script: {instanceID: 12810}
     - Class: 114
-      Script: {instanceID: 12984}
+      Script: {instanceID: 13036}
     - Class: 114
-      Script: {instanceID: 13020}
+      Script: {instanceID: 13072}
     - Class: 114
-      Script: {instanceID: 13420}
+      Script: {instanceID: 13388}
     - Class: 114
-      Script: {instanceID: 13508}
+      Script: {instanceID: 13470}
+    - Class: 114
+      Script: {instanceID: 13558}
+    - Class: 114
+      Script: {instanceID: 16360}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -159,55 +166,57 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11166}
+      Script: {instanceID: 11224}
     - Class: 114
-      Script: {instanceID: 11318}
+      Script: {instanceID: 11374}
     - Class: 114
-      Script: {instanceID: 11338}
+      Script: {instanceID: 11394}
     - Class: 114
-      Script: {instanceID: 11378}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11422}
+      Script: {instanceID: 11478}
     - Class: 114
-      Script: {instanceID: 11812}
+      Script: {instanceID: 11866}
     - Class: 114
-      Script: {instanceID: 11898}
+      Script: {instanceID: 11952}
     - Class: 114
-      Script: {instanceID: 11974}
+      Script: {instanceID: 12028}
     - Class: 114
-      Script: {instanceID: 12100}
+      Script: {instanceID: 12154}
     - Class: 114
-      Script: {instanceID: 12182}
+      Script: {instanceID: 12236}
     - Class: 114
-      Script: {instanceID: 12248}
+      Script: {instanceID: 12302}
     - Class: 114
-      Script: {instanceID: 12382}
+      Script: {instanceID: 12436}
     - Class: 114
-      Script: {instanceID: 12438}
+      Script: {instanceID: 12492}
     - Class: 114
-      Script: {instanceID: 12514}
+      Script: {instanceID: 12568}
     - Class: 114
-      Script: {instanceID: 12596}
+      Script: {instanceID: 12650}
     - Class: 114
-      Script: {instanceID: 12604}
+      Script: {instanceID: 12658}
     - Class: 114
-      Script: {instanceID: 12686}
+      Script: {instanceID: 12740}
     - Class: 114
-      Script: {instanceID: 12826}
+      Script: {instanceID: 12878}
     - Class: 114
-      Script: {instanceID: 12844}
+      Script: {instanceID: 12896}
     - Class: 114
-      Script: {instanceID: 12852}
+      Script: {instanceID: 12904}
     - Class: 114
-      Script: {instanceID: 12984}
+      Script: {instanceID: 13036}
     - Class: 114
-      Script: {instanceID: 13338}
+      Script: {instanceID: 13388}
     - Class: 114
-      Script: {instanceID: 13420}
+      Script: {instanceID: 13470}
     - Class: 114
-      Script: {instanceID: 13452}
+      Script: {instanceID: 13502}
     - Class: 114
-      Script: {instanceID: 13460}
+      Script: {instanceID: 13510}
+    - Class: 114
+      Script: {instanceID: 16360}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -262,35 +271,35 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11166}
+      Script: {instanceID: 11224}
     - Class: 114
-      Script: {instanceID: 11282}
+      Script: {instanceID: 11338}
     - Class: 114
-      Script: {instanceID: 11378}
+      Script: {instanceID: 11434}
     - Class: 114
-      Script: {instanceID: 11422}
+      Script: {instanceID: 11478}
     - Class: 114
-      Script: {instanceID: 11482}
+      Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 11898}
+      Script: {instanceID: 11952}
     - Class: 114
-      Script: {instanceID: 12100}
+      Script: {instanceID: 12154}
     - Class: 114
-      Script: {instanceID: 12382}
+      Script: {instanceID: 12436}
     - Class: 114
-      Script: {instanceID: 12686}
+      Script: {instanceID: 12740}
     - Class: 114
-      Script: {instanceID: 12712}
+      Script: {instanceID: 12766}
     - Class: 114
-      Script: {instanceID: 12984}
-    - Class: 114
-      Script: {instanceID: 13370}
+      Script: {instanceID: 13036}
     - Class: 114
       Script: {instanceID: 13420}
     - Class: 114
-      Script: {instanceID: 13444}
+      Script: {instanceID: 13470}
     - Class: 114
-      Script: {instanceID: 13488}
+      Script: {instanceID: 13494}
+    - Class: 114
+      Script: {instanceID: 13538}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1670,9 +1679,15 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: StageFSM
+  - hash:
+      serializedVersion: 2
+      Hash: e295267e711b3539c4e6db35b578aa82
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Photonfunction
   platform: 13
   scenePathNames:
   - Assets/Scenes/Room.unity
   - Assets/Scenes/Music.unity
   - Assets/Scenes/SampleScene 1.unity
-  playerPath: C:/Users/Kuan-Chun/Desktop/XR.apk
+  playerPath: C:/Users/SCPC/Desktop/XR_PUN3.apk
